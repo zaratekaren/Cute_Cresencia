@@ -1,317 +1,338 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi Tienda Favorita</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    /* Hover rosa pastel para botones */
-    .btn:hover {
-      background-color: #f8cdd3 !important;
-      border-color: #f8cdd3 !important;
-      color: #fff !important;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Tienda Favorita</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* Hover rosa pastel para botones */
+        .btn:hover {
+            background-color: #f8cdd3 !important;
+            border-color: #f8cdd3 !important;
+            color: #fff !important;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-    /* Hover en tarjetas */
-    .card:hover {
-      transform: scale(1.02);
-      transition: transform 0.3s ease;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
+        /* Hover en tarjetas */
+        .card:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
 
-    /* Hover en enlaces */
-    .nav-link:hover,
-    .footer a:hover {
-      text-decoration: underline;
-      color: #f8cdd3 !important;
-    }
+        /* Hover en enlaces */
+        .nav-link:hover,
+        .footer a:hover {
+            text-decoration: underline;
+            color: #f8cdd3 !important;
+        }
 
-    /* Imágenes */
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-     /* Fondo rosa pastel para navbar */
-    .navbar-rosa {
-      background-color: #f8cdd3 !important;
-    }
-    .hero-bg {
-    background-image: url('img/hero.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 350px;
-    position: relative;
-    color: #222;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .hero-bg .container {
-    position: relative;
-    z-index: 2;
-    background: rgba(255,255,255,0.7); /* Opcional: para mejor legibilidad */
-    border-radius: 12px;
-    padding: 2rem;
-    max-width: 600px;
-  }
-  </style>
+        /* Imágenes */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Fondo rosa pastel para navbar */
+        .navbar-rosa {
+            background-color: #f8cdd3 !important;
+        }
+
+        .hero-bg {
+            background-image: url('img/hero.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 350px;
+            position: relative;
+            color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-bg .container {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.7);
+            /* Opcional: para mejor legibilidad */
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 600px;
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light navbar-rosa">
-    <div class="container">
-        <!-- Logo reemplazado por texto elegante -->
-        <span class="navbar-brand" style="font-family: 'Dancing Script', cursive; font-size: 2rem; color: #a0527a; letter-spacing: 2px;">
-            Cute Cresencia
-        </span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#novedades">Novedades</a></li>
-                <li class="nav-item"><a class="nav-link" href="#ofertas">Ofertas</a></li>
-                <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-            </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-rosa">
+        <div class="container">
+            <!-- Logo reemplazado por texto elegante -->
+            <span class="navbar-brand"
+                style="font-family: 'Dancing Script', cursive; font-size: 2rem; color: #a0527a; letter-spacing: 2px;">
+                Cute Cresencia
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#novedades">Novedades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ofertas">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-<!-- Tipografía elegante Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-<style>
-    .navbar-rosa .nav-link {
-        transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
-        text-decoration: none !important;
+    </nav>
+    <!-- Tipografía elegante Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .navbar-rosa .nav-link {
+            transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+            text-decoration: none !important;
         }
+
         .navbar-rosa .nav-link:hover {
-        background-color: #fae6ec !important;
-        color: #222 !important;
-        text-decoration: none !important;
+            background-color: #fae6ec !important;
+            color: #222 !important;
+            text-decoration: none !important;
         }
+
         .navbar-rosa .navbar-nav .nav-item {
-        margin-left: 1rem;
-        margin-right: 1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
         }
     </style>
 
-<!-- Hero Mejorada Sin Imagen -->
-<section class="py-5 text-center position-relative" style="background: linear-gradient(135deg, #f8cdd3 0%, #fae6ec 100%); min-height: 350px; display: flex; align-items: center; justify-content: center;">
-    <div class="container" style="background: rgba(255,255,255,0.8); border-radius: 16px; padding: 2.5rem 2rem; max-width: 600px;">
-        <h1 class="display-4 fw-bold mb-3" style="color:#a0527a; font-family:'Dancing Script',cursive;">
-            ¡Bienvenido a Cute Cresencia!
-        </h1>
-        <p class="lead mb-4" style="font-size:1.3rem;">
-            Descubre moda, estilo y ofertas exclusivas para ti.
-        </p>
-        <div class="d-flex justify-content-center gap-3 mt-4">
-            <a href="#ofertas" class="btn btn-dark btn-lg shadow-sm">Explorar Ofertas</a>
-            <a href="#novedades" class="btn btn-outline-dark btn-lg shadow-sm">Ver Catálogo</a>
+    <!-- Hero Mejorada Sin Imagen -->
+    <section class="py-5 text-center position-relative"
+        style="background: linear-gradient(135deg, #f8cdd3 0%, #fae6ec 100%); min-height: 350px; display: flex; align-items: center; justify-content: center;">
+        <div class="container"
+            style="background: rgba(255,255,255,0.8); border-radius: 16px; padding: 2.5rem 2rem; max-width: 600px;">
+            <h1 class="display-4 fw-bold mb-3" style="color:#a0527a; font-family:'Dancing Script',cursive;">
+                ¡Bienvenido a Cute Cresencia!
+            </h1>
+            <p class="lead mb-4" style="font-size:1.3rem;">
+                Descubre moda, estilo y ofertas exclusivas para ti.
+            </p>
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="#ofertas" class="btn btn-dark btn-lg shadow-sm">Explorar Ofertas</a>
+                <a href="#novedades" class="btn btn-outline-dark btn-lg shadow-sm">Ver Catálogo</a>
+            </div>
         </div>
-    </div>
-    <!-- Decoración: corazones pastel -->
-    <span style="position:absolute;top:30px;left:40px;font-size:2.5rem;opacity:0.7;color:#f8cdd3;">&#10084;</span>
-    <span style="position:absolute;bottom:30px;right:40px;font-size:2rem;opacity:0.7;color:#fae6ec;">&#10084;</span>
-</section>
+        <!-- Decoración: corazones pastel -->
+        <span style="position:absolute;top:30px;left:40px;font-size:2.5rem;opacity:0.7;color:#f8cdd3;">&#10084;</span>
+        <span style="position:absolute;bottom:30px;right:40px;font-size:2rem;opacity:0.7;color:#fae6ec;">&#10084;</span>
+    </section>
 
-<!-- Novedades -->
-<section id="novedades" class="py-5 bg-light ">
-<div class="container">
-    <h2 class="text-center mt-5 mb-5">Novedades</h2>
-    <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100 text-center">
-                    <img src="img/novedades/img1.jpeg" alt="Zapatos 1" class="card-img-top novedades-img" />
-                    <div class="card-body">
-                        <h5 class="card-title">Zapatos 1</h5>
-                        <p class="card-text">$50</p>
-                        <span class="badge bg-success">Nuevo</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 text-center">
-                    <img src="img/novedades/img2.jpeg" alt="Camiseta 1" class="card-img-top novedades-img" />
-                    <div class="card-body">
-                        <h5 class="card-title">Camiseta 1</h5>
-                        <p class="card-text">$20</p>
-                        <span class="badge bg-success">Nuevo</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 text-center">
-                    <img src="img/novedades/img3.jpeg" alt="Reloj 1" class="card-img-top novedades-img" />
-                    <div class="card-body">
-                        <h5 class="card-title">Reloj 1</h5>
-                        <p class="card-text">$150</p>
-                        <span class="badge bg-success">Nuevo</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<style>
-    .novedades-img {
-        width: 100%;
-        height: 380px;
-        aspect-ratio: 16/10;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-</style>
-
-<!-- Ofertas Especiales -->
-<section id="ofertas" class="py-5 bg-white mt-5 mb-5">
-    <div class="container">
-        <h2 class="text-center mt-5 mb-5">Ofertas Especiales</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card border-warning text-center h-100">
-                    <img src="img/ofertas/oferta1.jpeg" alt="Chaqueta" class="card-img-top ofertas-img" />
-                    <div class="card-body">
-                        <span class="badge bg-warning text-dark mb-2">20% de Descuento</span>
-                        <h5 class="card-title">Chaqueta</h5>
-                        <p class="card-text">$30</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card border-warning text-center h-100">
-                    <img src="img/ofertas/oferta2.jpeg" alt="Laptop 1" class="card-img-top ofertas-img" />
-                    <div class="card-body">
-                        <span class="badge bg-warning text-dark mb-2">15% de Descuento</span>
-                        <h5 class="card-title">Laptop 1</h5>
-                        <p class="card-text">$1000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card border-warning text-center h-100">
-                    <img src="img/ofertas/oferta3.jpeg" alt="Móvil 1" class="card-img-top ofertas-img" />
-                    <div class="card-body">
-                        <span class="badge bg-warning text-dark mb-2">10% de Descuento</span>
-                        <h5 class="card-title">Móvil 1</h5>
-                        <p class="card-text">$800</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<style>
-    .ofertas-img {
-        width: 100%;
-        height: 480px;
-        aspect-ratio: 16/7;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-</style>
-
-<!-- Categorías Populares Carousel -->
-<section id="categorias" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="mb-4 text-center mt-5 mb-5">Categorías Populares</h2>
-        <div id="categoriasCarousel" class="carousel slide" data-bs-ride="carousel">
-            <!-- Indicadores abajo -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 text-center shadow-sm">
-                                <img src="img/categorias/pantalones.jpeg" alt="Pantalones" class="card-img-top categorias-img" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Pantalones</h5>
-                                    <p class="card-text">¡Descubre los estilos más nuevos y cómodos!</p>
-                                    <a href="pantalones.html" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 text-center shadow-sm">
-                                <img src="img/categorias/bodys.jpeg" alt="Bodys" class="card-img-top categorias-img" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Bodys</h5>
-                                    <p class="card-text">Vístete a la moda con nuestras colecciones.</p>
-                                    <a href="#" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 d-none d-lg-block">
-                            <div class="card h-100 text-center shadow-sm">
-                                <img src="img/categorias/conjuntos.jpeg" alt="Conjuntos" class="card-img-top categorias-img" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Conjuntos</h5>
-                                    <p class="card-text">Combina y crea tu propio estilo.</p>
-                                    <a href="#" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
-                                </div>
-                            </div>
+    <!-- Novedades -->
+    <section id="novedades" class="py-5 bg-light ">
+        <div class="container">
+            <h2 class="text-center mt-5 mb-5">Novedades</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 text-center">
+                        <img src="img/novedades/img1.jpeg" alt="Zapatos 1" class="card-img-top novedades-img" />
+                        <div class="card-body">
+                            <h5 class="card-title">Zapatos 1</h5>
+                            <p class="card-text">$50</p>
+                            <span class="badge bg-success">Nuevo</span>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 text-center shadow-sm">
-                                <img src="img/categorias/remeras.jpeg" alt="Remeras" class="card-img-top categorias-img" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Remeras</h5>
-                                    <p class="card-text">Colores y diseños para todos los gustos.</p>
-                                    <a href="#" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
-                                </div>
-                            </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center">
+                        <img src="img/novedades/img2.jpeg" alt="Camiseta 1" class="card-img-top novedades-img" />
+                        <div class="card-body">
+                            <h5 class="card-title">Camiseta 1</h5>
+                            <p class="card-text">$20</p>
+                            <span class="badge bg-success">Nuevo</span>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 text-center shadow-sm">
-                                <img src="img/categorias/shorts_polleras.jpeg" alt="Shorts" class="card-img-top categorias-img" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Shorts/Polleras</h5>
-                                    <p class="card-text">Complementa tu look con estilo.</p>
-                                    <a href="#" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 d-none d-lg-block">
-                            <div class="card h-100 text-center shadow-sm">
-                                <img src="img/categorias/zapatos.jpeg" alt="Zapatos" class="card-img-top categorias-img" />
-                                <div class="card-body">
-                                    <h5 class="card-title">Zapatos</h5>
-                                    <p class="card-text">Encuentra el calzado perfecto.</p>
-                                    <a href="#" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center">
+                        <img src="img/novedades/img3.jpeg" alt="Reloj 1" class="card-img-top novedades-img" />
+                        <div class="card-body">
+                            <h5 class="card-title">Reloj 1</h5>
+                            <p class="card-text">$150</p>
+                            <span class="badge bg-success">Nuevo</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Flechas laterales -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#categoriasCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#categoriasCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-            <!-- Puntos indicadores abajo -->
-            <div class="carousel-indicators position-static mt-4">
-                <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            </div>
-        </div>
-        <div class="text-center mt-3">
-            <small>Desliza para ver más categorías</small>
-        </div>
         </div>
     </section>
-        <style>
+    <style>
+        .novedades-img {
+            width: 100%;
+            height: 380px;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+
+    <!-- Ofertas Especiales -->
+    <section id="ofertas" class="py-5 bg-white mt-5 mb-5">
+        <div class="container">
+            <h2 class="text-center mt-5 mb-5">Ofertas Especiales</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-warning text-center h-100">
+                        <img src="img/ofertas/oferta1.jpeg" alt="Chaqueta" class="card-img-top ofertas-img" />
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">20% de Descuento</span>
+                            <h5 class="card-title">Chaqueta</h5>
+                            <p class="card-text">$30</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-warning text-center h-100">
+                        <img src="img/ofertas/oferta2.jpeg" alt="Laptop 1" class="card-img-top ofertas-img" />
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">15% de Descuento</span>
+                            <h5 class="card-title">Laptop 1</h5>
+                            <p class="card-text">$1000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-warning text-center h-100">
+                        <img src="img/ofertas/oferta3.jpeg" alt="Móvil 1" class="card-img-top ofertas-img" />
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">10% de Descuento</span>
+                            <h5 class="card-title">Móvil 1</h5>
+                            <p class="card-text">$800</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .ofertas-img {
+            width: 100%;
+            height: 480px;
+            aspect-ratio: 16/7;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+
+    <!-- Categorías Populares Carousel -->
+    <section id="categorias" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4 text-center mt-5 mb-5">Categorías Populares</h2>
+            <div id="categoriasCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicadores abajo -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 text-center shadow-sm">
+                                    <img src="img/categorias/pantalones.jpeg" alt="Pantalones"
+                                        class="card-img-top categorias-img" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pantalones</h5>
+                                        <p class="card-text">¡Descubre los estilos más nuevos y cómodos!</p>
+                                        <a href="pantalones.html" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 text-center shadow-sm">
+                                    <img src="img/categorias/bodys.jpeg" alt="Bodys"
+                                        class="card-img-top categorias-img" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bodys</h5>
+                                        <p class="card-text">Vístete a la moda con nuestras colecciones.</p>
+                                        <a href="#" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 d-none d-lg-block">
+                                <div class="card h-100 text-center shadow-sm">
+                                    <img src="img/categorias/conjuntos.jpeg" alt="Conjuntos"
+                                        class="card-img-top categorias-img" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Conjuntos</h5>
+                                        <p class="card-text">Combina y crea tu propio estilo.</p>
+                                        <a href="#" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 text-center shadow-sm">
+                                    <img src="img/categorias/remeras.jpeg" alt="Remeras"
+                                        class="card-img-top categorias-img" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Remeras</h5>
+                                        <p class="card-text">Colores y diseños para todos los gustos.</p>
+                                        <a href="#" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 text-center shadow-sm">
+                                    <img src="img/categorias/shorts_polleras.jpeg" alt="Shorts"
+                                        class="card-img-top categorias-img" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Shorts/Polleras</h5>
+                                        <p class="card-text">Complementa tu look con estilo.</p>
+                                        <a href="#" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 d-none d-lg-block">
+                                <div class="card h-100 text-center shadow-sm">
+                                    <img src="img/categorias/zapatos.jpeg" alt="Zapatos"
+                                        class="card-img-top categorias-img" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Zapatos</h5>
+                                        <p class="card-text">Encuentra el calzado perfecto.</p>
+                                        <a href="#" class="btn btn-outline-dark btn-sm mt-2">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flechas laterales -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#categoriasCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#categoriasCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+                <!-- Puntos indicadores abajo -->
+                <div class="carousel-indicators position-static mt-4">
+                    <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#categoriasCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <small>Desliza para ver más categorías</small>
+            </div>
+        </div>
+    </section>
+    <style>
         .categorias-img {
             width: 100%;
             height: 520px;
@@ -320,95 +341,102 @@
             border-radius: 8px;
             transition: transform 0.3s;
         }
+
         .card:hover .categorias-img {
             transform: scale(1.04);
         }
+
         .carousel-indicators {
             justify-content: center;
             bottom: -30px;
         }
+
         .carousel-indicators [data-bs-target] {
             background-color: #a0527a;
             width: 12px;
             height: 12px;
             border-radius: 50%;
         }
+
         .carousel-control-prev,
         .carousel-control-next {
             width: 5%;
         }
-        </style>
-<!-- Atención al Cliente Mejorada -->
-<section id="contacto" class="py-5 text-center">
-    <div class="container">
-        <h2>Atención al Cliente</h2>
-        <p class="mb-4">¿Tienes preguntas? ¡Contáctanos o visítanos en nuestro local!</p>
-        <!-- Mapa Google Maps -->
-        <div class="mb-4">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.9613868699694!2d-58.472525723416666!3d-34.63041605890995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc98f208425ff%3A0xbc0ec712de6144f7!2sAv.%20Nazca%2020%2C%20C1406AIN%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1759541740662!5m2!1sen!2sar" 
-                width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
-            <p class="mt-2 mb-0 fw-bold">Dirección: Av. Ejemplo 123, Buenos Aires</p>
+    </style>
+    <!-- Atención al Cliente Mejorada -->
+    <section id="contacto" class="py-5 text-center">
+        <div class="container">
+            <h2>Atención al Cliente</h2>
+            <p class="mb-4">¿Tienes preguntas? ¡Contáctanos o visítanos en nuestro local!</p>
+            <!-- Mapa Google Maps -->
+            <div class="mb-4">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.9613868699694!2d-58.472525723416666!3d-34.63041605890995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc98f208425ff%3A0xbc0ec712de6144f7!2sAv.%20Nazca%2020%2C%20C1406AIN%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1759541740662!5m2!1sen!2sar"
+                    width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen=""
+                    loading="lazy"></iframe>
+                <p class="mt-2 mb-0 fw-bold">Dirección: Av. Ejemplo 123, Buenos Aires</p>
+            </div>
+            <!-- Contacto WhatsApp -->
+            <div class="mb-4">
+                <h5 class="mb-3">Contáctanos por WhatsApp:</h5>
+                <a href="https://wa.me/5491123456789" target="_blank" class="btn btn-success me-2 mb-2">
+                    <i class="bi bi-whatsapp"></i> +54 9 11 2345-6789
+                </a>
+                <a href="https://wa.me/5491198765432" target="_blank" class="btn btn-success mb-2">
+                    <i class="bi bi-whatsapp"></i> +54 9 11 9876-5432
+                </a>
+            </div>
+            <!-- Redes Sociales -->
+            <div>
+                <h5 class="mb-3">Síguenos en redes sociales:</h5>
+                <a href="https://instagram.com/" target="_blank" class="btn btn-outline-dark me-2 mb-2">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+                <a href="https://facebook.com/" target="_blank" class="btn btn-outline-dark me-2 mb-2">
+                    <i class="bi bi-facebook"></i> Facebook
+                </a>
+                <a href="https://tiktok.com/" target="_blank" class="btn btn-outline-dark mb-2">
+                    <i class="bi bi-tiktok"></i> TikTok
+                </a>
+            </div>
         </div>
-        <!-- Contacto WhatsApp -->
-        <div class="mb-4">
-            <h5 class="mb-3">Contáctanos por WhatsApp:</h5>
-            <a href="https://wa.me/5491123456789" target="_blank" class="btn btn-success me-2 mb-2">
-                <i class="bi bi-whatsapp"></i> +54 9 11 2345-6789
-            </a>
-            <a href="https://wa.me/5491198765432" target="_blank" class="btn btn-success mb-2">
-                <i class="bi bi-whatsapp"></i> +54 9 11 9876-5432
-            </a>
+    </section>
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Footer sencillo y elegante -->
+    <footer class="bg-dark text-white py-4 m-0" style="margin:0 !important;">
+        <div class="text-center">
+            <ul class="list-inline mb-3">
+                <li class="list-inline-item">
+                    <a href="#" class="text-white text-decoration-none px-2">Términos y Condiciones</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="text-white text-decoration-none px-2">Política de Privacidad</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="text-white text-decoration-none px-2">Contacto</a>
+                </li>
+            </ul>
+            <p class="mb-0 small" style="opacity:0.8;">&copy; 2025 Mi Tienda Favorita</p>
         </div>
-        <!-- Redes Sociales -->
-        <div>
-            <h5 class="mb-3">Síguenos en redes sociales:</h5>
-            <a href="https://instagram.com/" target="_blank" class="btn btn-outline-dark me-2 mb-2">
-                <i class="bi bi-instagram"></i> Instagram
-            </a>
-            <a href="https://facebook.com/" target="_blank" class="btn btn-outline-dark me-2 mb-2">
-                <i class="bi bi-facebook"></i> Facebook
-            </a>
-            <a href="https://tiktok.com/" target="_blank" class="btn btn-outline-dark mb-2">
-                <i class="bi bi-tiktok"></i> TikTok
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Bootstrap Icons CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-<!-- Footer sencillo y elegante -->
-<footer class="bg-dark text-white py-4 m-0" style="margin:0 !important;">
-    <div class="text-center">
-        <ul class="list-inline mb-3">
-            <li class="list-inline-item">
-                <a href="#" class="text-white text-decoration-none px-2">Términos y Condiciones</a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#" class="text-white text-decoration-none px-2">Política de Privacidad</a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#" class="text-white text-decoration-none px-2">Contacto</a>
-            </li>
-        </ul>
-        <p class="mb-0 small" style="opacity:0.8;">&copy; 2025 Mi Tienda Favorita</p>
-    </div>
-</footer>
-<style>
-    footer {
-        border-top: 2px solid #f8cdd3;
-        background: #222;
-        width: 100%;
-        margin: 0 !important;
-    }
-    footer a:hover {
-        color: #f8cdd3 !important;
-        text-decoration: underline;
-    }
-</style>
+    </footer>
+    <style>
+        footer {
+            border-top: 2px solid #f8cdd3;
+            background: #222;
+            width: 100%;
+            margin: 0 !important;
+        }
+
+        footer a:hover {
+            color: #f8cdd3 !important;
+            text-decoration: underline;
+        }
+    </style>
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
